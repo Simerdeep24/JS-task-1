@@ -7,6 +7,10 @@ let pli = document.getElementsByClassName('hero-powers');
 let l1 = document.getElementById('li1');
 let l2 = document.getElementById('li2');
 let l3 = document.getElementById('li3');
+let realName = document.getElementById('realName');
+let affiliation = document.getElementById('affiliation');
+let origin = document.getElementById('origin');
+
 let heroes = [
     {
         name: "Iron Man",
@@ -76,6 +80,9 @@ function renderList(listId, items) {
 btn.addEventListener('click', function () {
     let a = Math.floor(Math.random() * heroes.length);
     head.innerHTML = `You are ${heroes[a].name}`;
+    realName.innerHTML = `Real Name: ${heroes[a].realName}`;
+    affiliation.innerHTML = `Affiliation: ${heroes[a].affiliation}`;
+    origin.innerHTML = `Origin: ${heroes[a].origin}`;
     sub.style = "display:none"
     cnt.style = 'display:block';
     cnt.style.backgroundImage = `url(${heroes[a].bg})`;
